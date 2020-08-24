@@ -52,7 +52,7 @@ const perguntaArquivo = (resposta) => {
             resultado += (`${create} (\n${columns[0]} INT,\n${columns[1]} VARCHAR(30),\n${columns[2]} VARCHAR(30),\n${columns[3]} VARCHAR(30)\n);
             \n\n`);
             for (let i =0; i < conteudo.length; i++){
-                resultado += (`${insert}(${columns}) VALUES (${conteudo[i].id}, "${conteudo[i].name}", "${conteudo[i].city}", "${conteudo[0].state}")\n`)
+                resultado += (`${insert}(${columns}) VALUES (${conteudo[i].id}, '${conteudo[i].name}', '${conteudo[i].city}', '${conteudo[0].state}');\n`)
             }
         });
 
