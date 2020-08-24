@@ -49,10 +49,10 @@ const perguntaArquivo = (resposta) => {
        
         //criar uma string que guarda tudo o que será escrito no formato .sql
         stream.on("data",(data)=> {
-            resultado += (`${create} (\n${columns[0]} INT,\n${columns[1]} VARCHAR(30),\n${columns[2]} VARCHAR(30),\n${columns[3]} VARCHAR(30)\n);
+            resultado += (`${create} (\n${columns[0]} INT,\n${columns[1]} VARCHAR(130),\n${columns[2]} VARCHAR(130),\n${columns[3]} VARCHAR(130)\n);
             \n\n`);
             for (let i =0; i < conteudo.length; i++){
-                resultado += (`${insert}(${columns}) VALUES (${conteudo[i].id}, '${conteudo[i].name}', '${conteudo[i].city}', '${conteudo[0].state}');\n`)
+                resultado += (`${insert}(${columns}) VALUES (${conteudo[i].id}, '${conteudo[i].name}', '${conteudo[i].city}', '${conteudo[i].state}');\n`)
             }
         });
 
